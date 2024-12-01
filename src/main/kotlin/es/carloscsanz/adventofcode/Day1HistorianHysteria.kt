@@ -36,20 +36,22 @@ class Day1HistorianHysteria(filePath: String) {
 
     fun firstChallenge(): Long {
         val rightSorted = rightList.sorted()
-        val distances = leftList.sorted().mapIndexed { index, value ->
-            val otherValue = rightSorted[index]
-            (value - otherValue).absoluteValue
-        }
+        val distances =
+            leftList.sorted().mapIndexed { index, value ->
+                val otherValue = rightSorted[index]
+                (value - otherValue).absoluteValue
+            }
 
         return distances.sum()
     }
 
     fun secondChallenge(): Long {
         val values = rightList.groupBy { it }
-        val scores = leftList.sorted().map { value ->
-            val occurrences = values[value]?.count() ?: 0
-            value * occurrences
-        }
+        val scores =
+            leftList.sorted().map { value ->
+                val occurrences = values[value]?.count() ?: 0
+                value * occurrences
+            }
 
         return scores.sum()
     }

@@ -19,4 +19,4 @@ class Day1HistorianHysteriaTest {
 
         actual shouldBe 31
     }
- }
+}
