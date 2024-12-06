@@ -3,7 +3,7 @@ package es.carloscsanz.adventofcode
 import kotlin.math.absoluteValue
 
 fun main() {
-    val exercise = Day1HistorianHysteria("/day-1/input.txt")
+    val exercise = Day1HistorianHysteria("/day-1-input.txt")
 
     val firstChallenge = exercise.firstChallenge()
     val secondChallenge = exercise.secondChallenge()
